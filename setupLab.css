@@ -1,0 +1,274 @@
+
+body {
+    margin: 0;
+    background-color: #010c20;
+    color: #FFFFFF;
+    text-align: center;
+    font-size: 18px;
+    font-family: Arial, sans-serif;
+}
+
+header {
+    background-color: #1a054d;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px 50px;
+    font-size: 16px;
+}
+
+header h1 {
+    font-size: 28px;
+}
+
+header a {
+    font-size: 16px;
+    color: #FFFFFF;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+header a:hover {
+    color: #b026ff;
+}
+
+nav {
+    display: flex;
+    gap: 30px;
+}
+
+.hero {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 40px 24px;
+    gap: 30px;
+}
+
+.hero-text {
+    text-align: left;
+    width: 45%;
+}
+
+.hero-text h2 {
+    font-size: 48px;
+}
+
+.hero-text p {
+    font-size: 18px;
+    line-height: 1.5;
+}
+
+.hero-image {
+    width: 50%;
+    text-align: center;
+}
+
+.hero-image img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+button {
+    background-color: #751665;
+    color: #FFFFFF;
+    border: none;
+    font-size: 16px;
+    padding: 12px 24px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #951e80;
+}
+
+section {
+    padding: 30px;
+}
+
+footer {
+    background-color: #1a054d;
+    padding: 20px;
+}
+
+#servicios,
+#como-funciona,
+#faq {
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative;
+}
+
+#servicios {
+    background-image:
+        linear-gradient(rgba(1, 12, 32, 0.55), rgba(1, 12, 32, 0.65)),
+        url("fondo-servicios.png");
+    padding: 50px 30px;
+}
+
+#como-funciona {
+    background-image:
+        linear-gradient(rgba(1, 12, 32, 0.55), rgba(1, 12, 32, 0.70)),
+        url("fondo-armado.png");
+    padding: 50px 20px;
+}
+
+#faq {
+    background-image:
+        linear-gradient(rgba(1, 12, 32, 0.55), rgba(1, 12, 32, 0.70)),
+        url("fondo-faq.png");
+    padding: 50px 30px;
+}
+
+.servicios-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: stretch;
+    gap: 20px;
+}
+
+.servicio-boton {
+    display: block;
+    flex: 1;
+    box-sizing: border-box;
+    min-width: 0;
+    padding: 20px;
+    border: 1px solid rgba(176, 38, 255, 0.25);
+    border-radius: 10px;
+    background-color: rgba(7, 21, 45, 0.65);
+    color: #FFFFFF;
+    text-decoration: none;
+    text-align: center;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.servicio-boton:hover {
+    background-color: rgba(117, 22, 101, 0.75);
+    transform: translateY(-5px);
+}
+
+.servicio-boton:focus-visible {
+    outline: 2px solid #b026ff;
+    outline-offset: 4px;
+}
+
+.servicio-icono {
+    color: #b026ff;
+    font-size: 40px;
+    margin-bottom: 10px;
+}
+
+.servicio-boton h3 {
+    margin-top: 10px;
+}
+
+.servicio-boton p {
+    line-height: 1.5;
+}
+
+/* CÓMO FUNCIONA */
+
+.pasos-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: stretch;
+    gap: 25px;
+}
+
+.pasos-container .servicio-boton {
+    padding: 25px 15px;
+}
+
+.paso-numero {
+    color: #b026ff;
+    font-size: 36px;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+.pasos-container h3 {
+    font-size: 22px;
+}
+
+.pasos-container p {
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+/* PREGUNTAS FRECUENTES */
+
+.faq-container {
+    max-width: 900px;
+    margin: 30px auto;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.faq-container .servicio-boton {
+    flex: initial;
+    padding: 20px;
+    text-align: left;
+}
+
+.faq-container h3 {
+    font-size: 18px;
+    margin: 0 0 10px;
+}
+
+.faq-container p {
+    font-size: 16px;
+    line-height: 1.5;
+    margin-bottom: 0;
+}
+
+/* DISEÑO ADAPTABLE */
+
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        gap: 20px;
+        padding: 25px 20px;
+    }
+
+    nav {
+        gap: 20px;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .hero {
+        flex-direction: column;
+        padding: 30px 20px;
+    }
+
+    .hero-text,
+    .hero-image {
+        width: 100%;
+    }
+
+    .hero-text h2 {
+        font-size: 36px;
+    }
+
+    .servicios-container,
+    .pasos-container {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .servicio-boton {
+        width: 100%;
+    }
+
+    #servicios,
+    #como-funciona,
+    #faq {
+        padding: 35px 20px;
+    }
+}
+
+
